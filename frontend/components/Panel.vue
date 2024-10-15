@@ -2,6 +2,7 @@
 	<section class="panel">
 		<div class="header">
 			<span class="title">{{ props.title }}</span>
+			<slot name="header" />
 		</div>
 		<slot/>
 	</section>
@@ -20,6 +21,8 @@ const props = defineProps({
 
 	.header {
 		width: 100%;
+		display: flex;
+		flex-direction: row;
 
 		.title {
 			display: inline-block;

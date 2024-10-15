@@ -1,8 +1,8 @@
 <template>
 	<Panel title="Packages">
-		<div class="header">
-			<button @click="addPackage">Add package</button>
-		</div>
+		<template #header>
+			<button @click="addPackage">+</button>
+		</template>
 		<ul>
 			<li v-for="pkg in usePackage.packageList">
 				<NuxtLink :to="'/packages/' + pkg">{{ pkg }}</NuxtLink>
@@ -25,5 +25,11 @@ onMounted(async () => {
 .panel {
 	display: flex;
 	flex-direction: column;
+
+	.header {
+		button {
+			margin-left: 10px;
+		}
+	}
 }
 </style>
