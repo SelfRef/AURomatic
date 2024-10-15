@@ -14,6 +14,6 @@ export default defineNuxtConfig({
       proxy: {
         to: 'http://localhost:8000/api/**'
       }
-    },
+    }
   }
 })

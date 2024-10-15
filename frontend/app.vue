@@ -1,5 +1,5 @@
 <template>
-	<header>
+	<header class="panel">
 		AURomatic
 	</header>
 	<main>
@@ -17,10 +17,12 @@
 #app {
 	display: flex;
 	flex-direction: column;
+	height: 100%;
 
 	main {
 		display: flex;
 		flex-direction: row;
+		flex: 1;
 	}
 }
 </style>

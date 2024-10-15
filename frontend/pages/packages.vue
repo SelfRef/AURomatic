@@ -1,18 +1,29 @@
 <template>
-	<nav class="panel">
+	<Panel title="Packages">
+		<div class="header">
+			<button @click="addPackage">Add package</button>
+		</div>
 		<ul>
-			<li v-for="pkg in pkgList">
-				<NuxtLink :to="'/packages/' + pkg">pkg</NuxtLink>
+			<li v-for="pkg in usePackage.packageList">
+				<NuxtLink :to="'/packages/' + pkg">{{ pkg }}</NuxtLink>
 			</li>
 		</ul>
-	</nav>
+	</Panel>
 	<NuxtPage/>
 </template>
 
 <script lang="ts" setup>
-const pkgList = ref([])
+const usePackage = usePackageState()
 
 onMounted(async () => {
-	pkgList.value = await $fetch('/api/pkgbuilds')
+	fetchPackages()
 })
+
 </script>
+
+<style scoped lang="scss">
+.panel {
+	display: flex;
+	flex-direction: column;
+}
+</style>

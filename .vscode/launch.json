@@ -1,0 +1,33 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "FastAPI",
+			"type": "debugpy",
+			"request": "launch",
+			"module": "uvicorn",
+			"args": [
+				"main:app",
+				"--reload"
+			],
+			"jinja": true,
+			"cwd": "${workspaceFolder}/backend"
+		},
+		{
+			"name": "Nuxt",
+			"type": "node-terminal",
+			"request": "launch",
+			"command": "npm run dev",
+			"cwd": "${workspaceFolder}/frontend"
+		}
+	],
+	"compounds": [
+		{
+			"name": "Client/Server",
+			"configurations": [
+				"FastAPI",
+				"Nuxt"
+			]
+		}
+	]
+}
