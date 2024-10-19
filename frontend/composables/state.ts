@@ -18,6 +18,10 @@ export const usePackageState = () => useState<{
 	packageInfo: {}
 }))
 
+export function isDev() {
+	return process.env.NODE_ENV === 'development'
+}
+
 export async function fetchPackages() {
 	const usePackage = usePackageState()
 	usePackage.value.packageList = await $fetch('/api/pkgbuilds')
