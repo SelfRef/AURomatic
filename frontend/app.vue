@@ -23,6 +23,7 @@
 		display: flex;
 		flex-direction: row;
 		flex: 1;
+		overflow: auto;
 	}
 }
 </style>
