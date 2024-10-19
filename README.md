@@ -16,3 +16,5 @@ Management system for maintaining, updating, building and scheduling PKGBUILD pa
 - [ ] Edit package and send changes to AUR
 - [ ] Upstream version lookup
 - [ ] Schedule tasks (building, checking)
+- [ ] Group packages (tags)
+- [ ] Per package settings
